@@ -15,7 +15,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView tv = findViewById(R.id.tv_current_sdk_int);
-        tv.setText("当前系统版本为：" + Build.VERSION.SDK_INT);
+        final int currentSdkInt = Build.VERSION.SDK_INT;
+        String s;
+        if (currentSdkInt >= 21) {
+            s = "当前版本是" + currentSdkInt + ";>=21 CardView的错误示范不会看到异常";
+        } else {
+            s = "当前版本是" + currentSdkInt + "; <21 CardView的错误示范会看到异常";
+        }
+        tv.setText(s);
 
         findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
             @Override
