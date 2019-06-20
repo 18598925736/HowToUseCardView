@@ -11,8 +11,8 @@
         android:id="@+id/tv_current_sdk_int"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="当前版本信息"
         android:gravity="center"
+        android:text="当前版本信息"
         android:textSize="18sp" />
 
     <TextView
@@ -33,5 +33,21 @@
         android:background="@color/colorAccent"
         android:padding="10dp"
         android:text="CardView 包含 圆角图片示范"
+        android:textColor="#ffffff" />
+
+    <!--<TextView-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="SDK >=21时，使用阴影不会默认产生间距;SDK < 21时，则会"-->
+        <!--android:textSize="18sp" />-->
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="CardView 同样的写法21以后和以前的设备上显示差别"
         android:textColor="#ffffff" />
 </LinearLayout>

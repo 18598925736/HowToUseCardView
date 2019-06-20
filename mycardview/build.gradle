@@ -1,9 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    //让SDK支持java1.8的新语法
+    compileOptions {
+        sourceCompatibility = "1.8"
+        targetCompatibility = "1.8"
+    }
     compileSdkVersion 28
-
-
     defaultConfig {
         applicationId "study.hank.com.mycardview"
         minSdkVersion 18

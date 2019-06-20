@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,19 +23,17 @@ public class MainActivity extends AppCompatActivity {
         }
         tv.setText(s);
 
-        findViewById(R.id.tv_1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Example1Activity.class);
-                startActivity(i);
-            }
+        findViewById(R.id.tv_1).setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, Example1Activity.class);
+            startActivity(i);
         });
-        findViewById(R.id.tv_2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Example2Activity.class);
-                startActivity(i);
-            }
+        findViewById(R.id.tv_2).setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, Example2Activity.class);
+            startActivity(i);
+        });
+        findViewById(R.id.tv_3).setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, Example3Activity.class);
+            startActivity(i);
         });
     }
 }
